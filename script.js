@@ -1,1 +1,14 @@
-console.log("test");
+const startScreen = document.querySelector("#start-screen");
+const quizScreen = document.querySelector("#quiz-screen");
+const resultScreen = document.querySelector("#result-screen");
+const startButton = document.querySelector("#start-btn");
+const questionText = document.querySelector("#question-text");
+const answersContainer = document.querySelector("#answers-container");
+const currentQuestionSpan = document.querySelector("#current-question");
+const totalQuestionsSpan = document.querySelector("#total-questions");
+const scoreSpan = document.querySelector("#score");
+const finalScoreSpan = document.querySelector("#final-score");
+const maxScoreSpan = document.querySelector("#max-score");
+const resultMessage = document.querySelector("#result-message");
+const restartButton = document.questionText("#restart-btn");
+const progressBar = document.querySelector("#progress");
