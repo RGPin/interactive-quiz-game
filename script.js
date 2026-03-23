@@ -10,7 +10,7 @@ const scoreSpan = document.querySelector("#score");
 const finalScoreSpan = document.querySelector("#final-score");
 const maxScoreSpan = document.querySelector("#max-score");
 const resultMessage = document.querySelector("#result-message");
-const restartButton = document.questionText("#restart-btn");
+const restartButton = document.querySelector("#restart-btn");
 const progressBar = document.querySelector("#progress");
 
 const quizQuestions = [
@@ -60,3 +60,24 @@ const quizQuestions = [
     ],
   },
 ];
+
+let currentQuestionIndex = 0;
+let score = 0;
+let answersDisabled = false;
+
+totalQuestionsSpan.textContent = quizQuestions.length;
+maxScoreSpan.textContent = quizQuestions.length;
+
+startButton.addEventListener("click", startQuiz);
+restartButton.addEventListener("click", restartQuiz);
+
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  scoreSpan.textContent = 0;
+
+  startScreen.classList.remove("active");
+  quizScreen.classList.add("active");
+}
+
+function restartQuiz() {}
