@@ -116,7 +116,7 @@ function selectAnswer(e) {
 
   [...answersContainer.children].forEach((button) => {
     if (button.dataset.correct === "true") button.classList.add("correct");
-    else button.classList.add("incorrect");
+    else if (button === selectedButton) button.classList.add("incorrect");
   });
 
   if (isCorrect) {
@@ -151,4 +151,7 @@ function showResults() {
   else resultMessage.textContent = "Keep studying! You'll get better!";
 }
 
-function restartQuiz() {}
+function restartQuiz() {
+  resultScreen.classList.remove("active");
+  startQuiz();
+}
